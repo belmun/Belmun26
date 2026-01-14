@@ -1,0 +1,200 @@
+/* ===================================
+   PORTRAIT PHOTOS IN 2x2 GRID LAYOUT
+   Photos are portrait, boxes are side-by-side
+   =================================== */
+
+/* TEAM PAGE - 2x2 Grid with portrait photos inside */
+.team-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.team-row.single {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-member {
+    background: linear-gradient(135deg, var(--beige) 0%, var(--beige-light) 100%);
+    padding: 2.5rem;
+    border-radius: 10px;
+    border: 3px solid var(--primary-brown);
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    border-color: var(--brown-dark);
+}
+
+/* Portrait photo inside the box */
+.team-photo {
+    width: 220px;
+    height: 300px;
+    border-radius: 10px;
+    margin: 0 auto 1.5rem;
+    overflow: hidden;
+    border: 4px solid var(--beige);
+    background-color: var(--brown-dark);
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-role {
+    color: var(--primary-brown);
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+}
+
+.team-name {
+    color: var(--brown-dark);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.team-description {
+    color: var(--text-dark);
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.team-description p {
+    margin: 0;
+}
+
+/* COMMITTEE STAFF - 2x2 Grid with portrait photos */
+.staff-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.staff-member {
+    background-color: var(--brown);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid var(--beige);
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.staff-member:hover {
+    background-color: #5a4329;
+    border-color: var(--green);
+}
+
+.staff-member.pager {
+    grid-column: 1 / -1;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Portrait photo inside the box */
+.staff-photo-placeholder {
+    width: 180px;
+    height: 260px;
+    border-radius: 10px;
+    margin: 0 auto 1.5rem;
+    overflow: hidden;
+    border: 3px solid var(--beige);
+    background-color: var(--brown-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.staff-photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.staff-role {
+    color: var(--green-light);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.staff-name {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.staff-description {
+    color: var(--beige);
+    line-height: 1.6;
+}
+
+.staff-description p {
+    margin: 0;
+}
+
+.staff-placeholder {
+    color: var(--beige);
+    text-align: center;
+    font-style: italic;
+}
+
+/* Mobile Responsive */
+@media (max-width: 968px) {
+    .team-row,
+    .staff-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-photo {
+        width: 200px;
+        height: 280px;
+    }
+    
+    .staff-photo-placeholder {
+        width: 160px;
+        height: 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-member,
+    .staff-member {
+        padding: 2rem;
+    }
+    
+    .team-photo {
+        width: 180px;
+        height: 260px;
+    }
+    
+    .staff-photo-placeholder {
+        width: 150px;
+        height: 220px;
+    }
+    
+    .team-name {
+        font-size: 1.5rem;
+    }
+}
