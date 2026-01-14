@@ -39,25 +39,30 @@ document.addEventListener('DOMContentLoaded', function() {
         setInterval(nextSlide, 5000);
     }
     
-    // Registration links - UPDATE THESE WITH YOUR GOOGLE FORMS
+    // Registration box click handlers
+    // TO ADD YOUR GOOGLE FORM LINKS LATER:
+    // 1. Get your Google Form link (looks like: https://forms.gle/xxxxx)
+    // 2. Replace the empty '' with your link in quotes like: 'https://forms.gle/xxxxx'
     const registrationLinks = {
-        'secretariat-link': '', // Add your form URL here
-        'chair-link': '',
-        'volunteer-link': '',
-        'delegate-link': ''
+        'secretariat-box': '', // Add Secretariat form link here when ready
+        'chair-box': '',       // Add Chair form link here when ready
+        'delegate-box': '',    // Add Delegate form link here when ready
+        'volunteer-box': ''    // Add Volunteer form link here when ready
     };
     
-    Object.keys(registrationLinks).forEach(linkId => {
-        const element = document.getElementById(linkId);
-        if (element) {
-            element.addEventListener('click', function(e) {
-                const url = registrationLinks[linkId];
+    Object.keys(registrationLinks).forEach(boxId => {
+        const box = document.getElementById(boxId);
+        if (box) {
+            box.style.cursor = 'pointer';
+            box.addEventListener('click', function(e) {
+                const url = registrationLinks[boxId];
                 
                 if (url && url.trim() !== '') {
+                    // If you've added a Google Form link, it will open here
                     window.open(url, '_blank');
                 } else {
-                    e.preventDefault();
-                    alert('Registration form coming soon! Please check back later or contact us at belmun26@gmail.com');
+                    // Show "stay tuned" message until you add the links
+                    alert('Registration opens soon! 🎉\n\nStay tuned and follow us on Instagram @belmun26 for updates!\n\nWe\'ll announce when registration is live!');
                 }
             });
         }
