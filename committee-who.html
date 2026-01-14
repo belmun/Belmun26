@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
@@ -22,6 +21,7 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
+                <li><a href="team.html">The Team</a></li>
                 <li class="dropdown">
                     <a href="committees.html" class="active">Committees</a>
                     <div class="dropdown-content">
@@ -45,13 +45,13 @@
                         <a href="delegate-resources.html#schedule">Conference Schedule</a>
                     </div>
                 </li>
+                <li><a href="team.html">The Team</a></li>
                 <li><a href="register.html">Register</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Page Header -->
     <section class="page-header">
         <img src="un-header.jpg" alt="UN Assembly" class="un-header-image" style="display: none;" onerror="this.style.display='none'">
         <div class="container">
@@ -60,96 +60,66 @@
         </div>
     </section>
 
-    <!-- Committee Detail -->
     <section class="committee-detail">
         <div class="container">
-            
             <div class="committee-layout">
-                <!-- Left Side: Image and Background Guide -->
                 <div class="committee-left">
-                    <!-- Committee Image -->
                     <div class="committee-image-container">
                         <img src="committee-images/who.jpg" alt="WHO Committee" class="committee-image" style="display: none;" onerror="this.style.display='none'; this.parentElement.querySelector('.committee-image-placeholder').style.display='block';">
-                        <div class="committee-image-placeholder" style="display: block;">
-                            <p><strong>Add WHO Committee Image Here</strong></p>
-                            <p style="font-size: 0.9rem; margin-top: 1rem;">Upload your image as:<br>committee-images/who.jpg</p>
-                        </div>
+                        <div class="committee-image-placeholder" style="display: block;"></div>
                     </div>
 
-                    <!-- Background Guide -->
                     <div class="background-guide-box">
                         <h3>Background Guide</h3>
                         <div class="file-upload-placeholder" onclick="alert('Background guide will be uploaded here soon! Stay tuned.')">
-                            <p><strong>📄 Click to view guide</strong></p>
-                            <p style="font-size: 0.9rem;">Upload as: guides/who-background-guide.pdf</p>
                             <span class="coming-soon-badge">Coming Soon</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Side: Committee Info and Staff -->
                 <div class="committee-right">
                     <div class="committee-title">
                         <h1>WHO <span class="full-name">(World Health Organization)</span></h1>
                     </div>
 
                     <div class="committee-description">
-                        <p>The World Health Organization is the directing and coordinating authority for health within the United Nations system. Delegates will address critical global health crises, pandemic preparedness, and healthcare accessibility. This committee will focus on developing comprehensive strategies for disease prevention, strengthening healthcare infrastructure in developing nations, and fostering international cooperation in medical emergencies.</p>
-                        
-                        <p>Topics for discussion may include vaccine distribution equity, antimicrobial resistance, mental health initiatives, and the impact of climate change on global health outcomes. Delegates will work collaboratively to draft resolutions that promote universal health coverage and address health disparities worldwide.</p>
+                        <p>Address global health crises, pandemic preparedness, and healthcare accessibility worldwide.</p>
+                        <p>Delegates will engage in substantive debate on critical issues facing this committee, developing comprehensive solutions through diplomatic negotiation and collaborative problem-solving.</p>
                     </div>
 
                     <div class="committee-staff">
                         <h2 style="color: var(--white); margin-bottom: 2rem; text-align: center; font-size: 2rem;">Committee Staff</h2>
                         
-                        <!-- Head Chair and Co-Chair Row -->
                         <div class="staff-row">
-                            <!-- Head Chair -->
                             <div class="staff-member">
                                 <div class="staff-role">Head Chair</div>
-                                <div class="staff-photo-placeholder">
-                                    <p>Photo</p>
-                                </div>
-                                <div class="staff-name staff-placeholder">[Name to be added]</div>
-                                <div class="staff-description staff-placeholder">
-                                    <p>Add head chair name, photo, and description here</p>
-                                </div>
+                                <div class="staff-photo-placeholder"></div>
+                                <div class="staff-name"></div>
+                                <div class="staff-description"></div>
                             </div>
 
-                            <!-- Co-Chair -->
                             <div class="staff-member">
                                 <div class="staff-role">Co-Chair</div>
-                                <div class="staff-photo-placeholder">
-                                    <p>Photo</p>
-                                </div>
-                                <div class="staff-name staff-placeholder">[Name to be added]</div>
-                                <div class="staff-description staff-placeholder">
-                                    <p>Add co-chair name, photo, and description here</p>
-                                </div>
+                                <div class="staff-photo-placeholder"></div>
+                                <div class="staff-name"></div>
+                                <div class="staff-description"></div>
                             </div>
                         </div>
 
-                        <!-- Pager (Centered) -->
                         <div class="staff-row">
                             <div class="staff-member pager">
                                 <div class="staff-role">Pager</div>
-                                <div class="staff-photo-placeholder">
-                                    <p>Photo</p>
-                                </div>
-                                <div class="staff-name staff-placeholder">[Name to be added]</div>
-                                <div class="staff-description staff-placeholder">
-                                    <p>Add pager name, photo, and description here</p>
-                                </div>
+                                <div class="staff-photo-placeholder"></div>
+                                <div class="staff-name"></div>
+                                <div class="staff-description"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- Call to Action -->
     <section class="cta">
         <div class="container">
             <h2>Interested in WHO?</h2>
@@ -158,7 +128,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 BELMUN. All rights reserved.</p>
