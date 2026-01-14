@@ -1,10 +1,11 @@
 /* ===================================
    BELMUN 2026 - Main Stylesheet
-   NEW Brand Colors:
-   - Green: #424610
-   - Beige: #8f8779
-   - Brown: #363026
-   - Brown 2: #483322
+   NEW Color Distribution:
+   - Green #424610: 20%
+   - Light Green #5a5e18: 20%
+   - Beige #8f8779: 25% (MOST USED)
+   - Brown #363026: 15%
+   - Brown #483322: 20%
    =================================== */
 
 /* ===================================
@@ -15,22 +16,513 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* ===================================
+   NEW COLOR SCHEME - EXACT PERCENTAGES
+   Green #424610 - 20%
+   Light Green #5a5e18 - 20%
+   Beige #8f8779 - 25% (MOST)
+   Brown #363026 - 15%
+   Brown #483322 - 20%
+   =================================== */
 
 :root {
-    --primary-green: #483322;
+    --green: #424610;
+    --green-light: #5a5e18;
     --beige: #8f8779;
-    --dark-green: #424610;
-    --brown: #424610;
+    --brown-dark: #363026;
+    --brown: #483322;
     --white: #ffffff;
-    --light-gray: #f5f5f5;
     --text-light: #e8e8e8;
+    --text-dark: #2a2520;
 }
 
+/* BODY - Beige (25%) */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--text-light);
-    background-color: var(--dark-green);
+    background-color: var(--beige);
+    color: var(--text-dark);
+}
+
+/* NAVBAR - Brown Dark (15%) */
+.navbar {
+    background-color: var(--brown-dark);
+    border-bottom: 3px solid var(--green);
+}
+
+.nav-links a {
+    color: var(--beige);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.dropdown-content {
+    background-color: var(--brown-dark);
+    border: 2px solid var(--green);
+}
+
+.dropdown-content a:hover {
+    background-color: var(--green);
+}
+
+/* HERO - Green (20%) + Light Green (20%) */
+.hero {
+    background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
+}
+
+.hero-overlay-dark {
+    background: rgba(54, 48, 38, 0.6);
+}
+
+/* PAGE HEADER - Green (20%) */
+.page-header {
+    background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
+    border-bottom: 4px solid var(--beige);
+}
+
+.page-header h1,
+.page-header p {
+    color: var(--white);
+}
+
+/* QUICK INFO - Beige (25%) */
+.quick-info {
+    background-color: var(--beige);
+}
+
+.info-card {
+    background-color: var(--white);
+    border: 3px solid var(--brown);
+}
+
+.info-card:hover {
+    border-color: var(--green);
+    box-shadow: 0 10px 30px rgba(66, 70, 16, 0.3);
+}
+
+.info-card h3 {
+    color: var(--brown-dark);
+}
+
+.info-card p {
+    color: var(--text-dark);
+}
+
+/* COMMITTEES MAIN - Beige (25%) */
+.committees-main {
+    background-color: var(--beige);
+}
+
+.committees-intro {
+    background-color: var(--white);
+    border: 3px solid var(--green);
+}
+
+.committees-intro h2 {
+    color: var(--brown-dark);
+}
+
+.committees-intro p {
+    color: var(--text-dark);
+}
+
+/* DIFFICULTY HEADERS - Green (20%) + Light Green (20%) */
+.difficulty-header {
+    background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
+    border-left: 5px solid var(--beige);
+}
+
+.difficulty-badge {
+    background-color: var(--brown);
+    color: var(--white);
+}
+
+.difficulty-header h2 {
+    color: var(--white);
+}
+
+/* COMMITTEE CARDS - Brown (20%) */
+.committee-card {
+    background-color: var(--white);
+    border: 3px solid var(--brown);
+}
+
+.committee-card:hover {
+    border-color: var(--green);
+    box-shadow: 0 10px 30px rgba(66, 70, 16, 0.4);
+}
+
+.committee-card-header {
+    background-color: var(--brown);
+}
+
+.committee-card-header h3 {
+    color: var(--white);
+}
+
+.committee-card-body h4 {
+    color: var(--green);
+}
+
+.committee-card-body p {
+    color: var(--text-dark);
+}
+
+/* COMMITTEE DETAIL - Beige (25%) */
+.committee-detail {
+    background-color: var(--beige);
+}
+
+.committee-left {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 3px solid var(--green);
+}
+
+.committee-image-container {
+    background-color: var(--brown-dark);
+    border: 3px solid var(--green);
+}
+
+.committee-image-placeholder {
+    color: var(--beige);
+}
+
+.background-guide-box {
+    background-color: var(--white);
+    border: 2px solid var(--green);
+}
+
+.background-guide-box h3 {
+    color: var(--brown-dark);
+}
+
+.file-upload-placeholder {
+    background-color: #f5f5f5;
+    border: 2px dashed var(--green);
+}
+
+.file-upload-placeholder:hover {
+    border-color: var(--green-light);
+    background-color: var(--beige);
+}
+
+.file-upload-placeholder p {
+    color: var(--text-dark);
+}
+
+.coming-soon-badge {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+/* COMMITTEE RIGHT SIDE - Light Green (20%) */
+.committee-right {
+    background: linear-gradient(135deg, var(--green-light) 0%, var(--green) 100%);
+    border: 3px solid var(--brown);
+}
+
+.committee-title h1 {
+    color: var(--white);
+}
+
+.committee-title .full-name {
+    color: var(--beige);
+}
+
+.committee-description {
+    color: var(--white);
+    line-height: 1.8;
+}
+
+/* STAFF MEMBERS - Brown (20%) */
+.staff-member {
+    background-color: var(--brown);
+    border: 2px solid var(--beige);
+}
+
+.staff-member:hover {
+    background-color: #5a4329;
+    border-color: var(--green);
+}
+
+.staff-role {
+    color: var(--green-light);
+}
+
+.staff-photo-placeholder {
+    background-color: var(--brown-dark);
+    border: 3px solid var(--beige);
+    color: var(--beige);
+}
+
+.staff-name {
+    color: var(--white);
+}
+
+.staff-description {
+    color: var(--beige);
+}
+
+.staff-placeholder {
+    color: var(--beige);
+}
+
+/* TEAM PAGE - Beige (25%) */
+.team-content {
+    background-color: var(--beige);
+}
+
+.team-member {
+    background-color: var(--white);
+    border: 3px solid var(--green);
+}
+
+.team-member:hover {
+    border-color: var(--brown);
+    box-shadow: 0 10px 30px rgba(66, 70, 16, 0.4);
+}
+
+.team-photo {
+    background-color: var(--brown-dark);
+    border: 4px solid var(--green);
+}
+
+.team-role {
+    color: var(--green);
+}
+
+.team-name {
+    color: var(--brown-dark);
+}
+
+.team-description {
+    color: var(--text-dark);
+}
+
+/* DELEGATE RESOURCES - Beige (25%) */
+.resources-main {
+    background-color: var(--beige);
+}
+
+.resource-box {
+    background-color: var(--white);
+    border: 3px solid var(--green);
+}
+
+.resource-box:hover {
+    border-color: var(--brown);
+    box-shadow: 0 10px 30px rgba(66, 70, 16, 0.4);
+}
+
+.resource-box h3 {
+    color: var(--brown-dark);
+}
+
+.resource-file-placeholder {
+    background-color: #f5f5f5;
+    border: 2px dashed var(--green);
+}
+
+.resource-file-placeholder p {
+    color: var(--text-dark);
+}
+
+/* REGISTRATION - Green (20%) + Brown (20%) */
+.registration-section {
+    background-color: var(--beige);
+}
+
+.registration-box {
+    background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
+    border: 3px solid var(--brown);
+}
+
+.registration-box::before {
+    background: linear-gradient(135deg, var(--green-light) 0%, var(--brown) 100%);
+}
+
+.registration-box:hover {
+    border-color: var(--brown-dark);
+}
+
+.registration-box h2,
+.registration-box p,
+.registration-cta {
+    color: var(--white);
+}
+
+.registration-info {
+    background-color: var(--white);
+    border-left: 5px solid var(--green);
+}
+
+.registration-info h3 {
+    color: var(--brown-dark);
+}
+
+.registration-info li {
+    color: var(--text-dark);
+    border-bottom: 1px solid var(--beige);
+}
+
+/* ABOUT PAGE - Beige (25%) */
+.about-content {
+    background-color: var(--beige);
+}
+
+.content-section {
+    background-color: var(--white);
+    border: 3px solid var(--green);
+}
+
+.content-section h2 {
+    color: var(--brown-dark);
+    border-bottom: 3px solid var(--green);
+}
+
+.content-section p {
+    color: var(--text-dark);
+}
+
+.feature-item {
+    background-color: #f5f5f5;
+    border: 2px solid var(--brown);
+}
+
+.feature-item h3 {
+    color: var(--green);
+}
+
+.feature-item p {
+    color: var(--text-dark);
+}
+
+/* CONTACT PAGE - Beige (25%) */
+.contact-content {
+    background-color: var(--beige);
+}
+
+.contact-info-main {
+    background-color: var(--white);
+    border: 3px solid var(--green);
+}
+
+.contact-info-main h2 {
+    color: var(--brown-dark);
+}
+
+.contact-intro {
+    color: var(--text-dark);
+}
+
+.info-box {
+    background-color: #f5f5f5;
+    border: 2px solid var(--green);
+}
+
+.info-box:hover {
+    border-color: var(--brown);
+}
+
+.info-box h3 {
+    color: var(--brown-dark);
+}
+
+.info-box p {
+    color: var(--text-dark);
+}
+
+.info-box a {
+    color: var(--green);
+}
+
+.contact-cta-box {
+    background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
+}
+
+.contact-cta-box h3,
+.contact-cta-box p {
+    color: var(--white);
+}
+
+.faq-item {
+    background-color: #f5f5f5;
+    border: 2px solid var(--brown);
+}
+
+.faq-item h4 {
+    color: var(--brown-dark);
+}
+
+.faq-item p {
+    color: var(--text-dark);
+}
+
+.faq-item a {
+    color: var(--green);
+}
+
+/* CTA SECTION - Green (20%) + Light Green (20%) */
+.cta {
+    background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
+}
+
+.cta h2,
+.cta p {
+    color: var(--white);
+}
+
+/* BUTTONS - Brown (20%) */
+.btn-primary {
+    background-color: var(--brown);
+    color: var(--white);
+    border: 2px solid var(--beige);
+}
+
+.btn-primary:hover {
+    background-color: var(--brown-dark);
+    border-color: var(--green);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--white);
+    color: var(--brown-dark);
+}
+
+/* FOOTER - Brown Dark (15%) */
+.footer {
+    background-color: var(--brown-dark);
+    border-top: 3px solid var(--green);
+}
+
+.footer p,
+.footer-links a {
+    color: var(--beige);
+}
+
+.footer-links a:hover {
+    color: var(--white);
+}
+
+/* RESPONSIVE - Keep colors consistent */
+@media (max-width: 968px) {
+    .nav-links {
+        background-color: var(--brown-dark);
+    }
+    
+    .dropdown-content {
+        background-color: var(--brown-dark);
+    }
 }
 
 .container {
@@ -43,7 +535,6 @@ body {
    NAVIGATION BAR
    =================================== */
 .navbar {
-    background-color: var(--green);
     padding: 1rem 0;
     position: sticky;
     top: 0;
@@ -89,7 +580,6 @@ body {
 }
 
 .nav-links a {
-    color: var(--text-light);
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -97,13 +587,6 @@ body {
     border-radius: 4px;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-    color: var(--white);
-    background-color: var(--primary-brown);
-}
-
-/* Dropdown menu */
 .nav-links li {
     position: relative;
 }
@@ -117,7 +600,6 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: var(--green);
     min-width: 220px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     border-radius: 4px;
@@ -132,17 +614,10 @@ body {
 .dropdown-content a {
     display: block;
     padding: 0.75rem 1rem;
-    color: var(--text-light);
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
-.dropdown-content a:hover {
-    background-color: var(--primary-brown);
-    color: var(--white);
-}
-
-/* Mobile Menu Toggle */
 .mobile-menu-toggle {
     display: none;
     flex-direction: column;
@@ -161,7 +636,7 @@ body {
 }
 
 /* ===================================
-   HERO SECTION (Homepage)
+   HERO SECTION
    =================================== */
 .hero {
     position: relative;
@@ -170,7 +645,6 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(135deg, var(--green) 0%, var(--primary-brown) 100%);
     overflow: hidden;
 }
 
@@ -205,7 +679,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(54, 48, 38, 0.75);
     z-index: 1;
 }
 
@@ -254,33 +727,10 @@ body {
     font-size: 1rem;
 }
 
-.btn-primary {
-    background-color: var(--primary-brown);
-    color: var(--white);
-}
-
-.btn-primary:hover {
-    background-color: #535716;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(66, 70, 16, 0.4);
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: var(--white);
-    border: 2px solid var(--white);
-}
-
-.btn-secondary:hover {
-    background-color: var(--white);
-    color: var(--green);
-}
-
 /* ===================================
    PAGE HEADER
    =================================== */
 .page-header {
-    background: linear-gradient(135deg, var(--green) 0%, var(--primary-brown) 100%);
     padding: 4rem 0;
     text-align: center;
     position: relative;
@@ -307,17 +757,14 @@ body {
 }
 
 .page-header h1 {
-    color: var(--white);
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
 .page-header p {
-    color: var(--text-light);
     font-size: 1.2rem;
 }
 
-/* UN Header Image */
 .un-header-image {
     width: 100%;
     max-height: 200px;
@@ -326,29 +773,54 @@ body {
 }
 
 /* ===================================
-   COMMITTEES - MAIN PAGE
+   QUICK INFO SECTION
+   =================================== */
+.quick-info {
+    padding: 4rem 0;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.info-card {
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+}
+
+.info-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+/* ===================================
+   COMMITTEES MAIN PAGE
    =================================== */
 .committees-main {
     padding: 4rem 0;
-    background-color: var(--dark-green);
 }
 
 .committees-intro {
     text-align: center;
     margin-bottom: 4rem;
     padding: 2rem;
-    background-color: var(--green);
     border-radius: 10px;
 }
 
 .committees-intro h2 {
-    color: var(--white);
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 .committees-intro p {
-    color: var(--text-light);
     font-size: 1.2rem;
 }
 
@@ -360,8 +832,6 @@ body {
     padding: 1.5rem;
     border-radius: 10px;
     margin-bottom: 2rem;
-    background-color: var(--green);
-    border-left: 5px solid var(--primary-brown);
 }
 
 .difficulty-badge {
@@ -371,12 +841,9 @@ body {
     font-weight: bold;
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
-    background-color: var(--primary-brown);
-    color: white;
 }
 
 .difficulty-header h2 {
-    color: var(--white);
     margin: 0;
 }
 
@@ -387,11 +854,9 @@ body {
 }
 
 .committee-card {
-    background-color: var(--green);
     padding: 0;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid var(--beige);
     overflow: hidden;
     cursor: pointer;
     text-decoration: none;
@@ -400,18 +865,14 @@ body {
 
 .committee-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(66, 70, 16, 0.4);
-    border-color: var(--primary-brown);
 }
 
 .committee-card-header {
-    background-color: var(--primary-brown);
     padding: 1.5rem;
     text-align: center;
 }
 
 .committee-card-header h3 {
-    color: var(--white);
     font-size: 1.8rem;
     margin: 0;
 }
@@ -421,14 +882,12 @@ body {
 }
 
 .committee-card-body h4 {
-    color: var(--beige);
     font-size: 1rem;
     margin-bottom: 1rem;
     font-weight: normal;
 }
 
 .committee-card-body p {
-    color: var(--text-light);
     line-height: 1.6;
     font-size: 0.95rem;
 }
@@ -438,7 +897,6 @@ body {
    =================================== */
 .committee-detail {
     padding: 4rem 0;
-    background-color: var(--dark-green);
 }
 
 .committee-layout {
@@ -457,11 +915,9 @@ body {
 .committee-image-container {
     width: 100%;
     height: 400px;
-    background-color: var(--green);
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 1.5rem;
-    border: 3px solid var(--primary-brown);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -474,7 +930,6 @@ body {
 }
 
 .committee-image-placeholder {
-    color: var(--beige);
     text-align: center;
     padding: 2rem;
 }
@@ -485,42 +940,29 @@ body {
 }
 
 .background-guide-box {
-    background-color: var(--green);
     border-radius: 10px;
     padding: 2rem;
-    border: 2px solid var(--beige);
 }
 
 .background-guide-box h3 {
-    color: var(--white);
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
 
 .file-upload-placeholder {
-    background-color: var(--dark-green);
     padding: 2rem;
     border-radius: 8px;
     text-align: center;
-    border: 2px dashed var(--beige);
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.file-upload-placeholder:hover {
-    border-color: var(--primary-brown);
-    background-color: var(--green);
-}
-
 .file-upload-placeholder p {
-    color: var(--text-light);
     margin: 0.5rem 0;
 }
 
 .coming-soon-badge {
     display: inline-block;
-    background-color: var(--primary-brown);
-    color: var(--white);
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -528,7 +970,6 @@ body {
 }
 
 .committee-right {
-    background-color: var(--green);
     padding: 3rem;
     border-radius: 10px;
 }
@@ -538,21 +979,17 @@ body {
 }
 
 .committee-title h1 {
-    color: var(--white);
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
 }
 
 .committee-title .full-name {
-    color: var(--beige);
     font-size: 1.3rem;
     margin-bottom: 1.5rem;
     display: block;
 }
 
 .committee-description {
-    color: var(--text-light);
-    line-height: 1.8;
     font-size: 1.1rem;
     margin-bottom: 3rem;
 }
@@ -569,10 +1006,8 @@ body {
 }
 
 .staff-member {
-    background-color: var(--dark-green);
     padding: 2rem;
     border-radius: 10px;
-    border: 2px solid var(--beige);
 }
 
 .staff-member.pager {
@@ -583,7 +1018,6 @@ body {
 }
 
 .staff-role {
-    color: var(--primary-brown);
     font-size: 0.9rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -594,25 +1028,20 @@ body {
 .staff-photo-placeholder {
     width: 150px;
     height: 150px;
-    background-color: var(--green);
     border-radius: 50%;
     margin: 0 auto 1rem;
-    border: 3px solid var(--primary-brown);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--beige);
 }
 
 .staff-name {
-    color: var(--white);
     font-size: 1.5rem;
     margin-bottom: 1rem;
     text-align: center;
 }
 
 .staff-description {
-    color: var(--text-light);
     line-height: 1.6;
     text-align: center;
 }
@@ -620,7 +1049,6 @@ body {
 .staff-placeholder {
     text-align: center;
     font-style: italic;
-    color: var(--beige);
 }
 
 /* ===================================
@@ -628,12 +1056,11 @@ body {
    =================================== */
 .resources-main {
     padding: 4rem 0;
-    background-color: var(--dark-green);
 }
 
 .resources-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 2rem;
     margin-top: 3rem;
     max-width: 800px;
@@ -642,33 +1069,26 @@ body {
 }
 
 .resource-box {
-    background-color: var(--green);
     border-radius: 10px;
     padding: 3rem 2rem;
-    border: 3px solid var(--beige);
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .resource-box:hover {
     transform: translateY(-5px);
-    border-color: var(--primary-brown);
-    box-shadow: 0 10px 30px rgba(66, 70, 16, 0.4);
 }
 
 .resource-box h3 {
-    color: var(--white);
     font-size: 1.8rem;
     margin-bottom: 1rem;
     text-align: center;
 }
 
 .resource-file-placeholder {
-    background-color: var(--dark-green);
     padding: 3rem 2rem;
     border-radius: 8px;
     text-align: center;
-    border: 2px dashed var(--beige);
     min-height: 200px;
     display: flex;
     flex-direction: column;
@@ -677,7 +1097,6 @@ body {
 }
 
 .resource-file-placeholder p {
-    color: var(--text-light);
     margin: 0.5rem 0;
     font-size: 1rem;
 }
@@ -685,6 +1104,10 @@ body {
 /* ===================================
    TEAM PAGE STYLES
    =================================== */
+.team-content {
+    padding: 4rem 0;
+}
+
 .team-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -692,62 +1115,62 @@ body {
     margin-bottom: 3rem;
 }
 
-.team-member {
-    background-color: var(--green);
-    padding: 3rem 2rem;
-    border-radius: 10px;
-    border: 2px solid var(--beige);
-    text-align: center;
+.team-row.single {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.team-member.team-centered {
-    grid-column: 1 / -1;
-    max-width: 500px;
-    margin: 0 auto;
+.team-member {
+    padding: 2.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-photo img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .team-role {
-    color: var(--primary-brown);
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 0.95rem;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 1.5rem;
-}
-
-.team-photo-placeholder {
-    width: 180px;
-    height: 180px;
-    background-color: var(--dark-green);
-    border-radius: 50%;
-    margin: 0 auto 1.5rem;
-    border: 4px solid var(--primary-brown);
+    margin-bottom: 0.75rem;
 }
 
 .team-name {
-    color: var(--white);
     font-size: 1.8rem;
-    margin-bottom: 1rem;
     font-weight: 600;
-    min-height: 2.2rem;
+    margin-bottom: 1rem;
 }
 
 .team-description {
-    color: var(--text-light);
-    line-height: 1.6;
-    min-height: 3rem;
+    line-height: 1.7;
+    font-size: 1rem;
 }
 
-@media (max-width: 968px) {
-    .team-row {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .team-member.team-centered {
-        max-width: 100%;
-    }
+.team-description p {
+    margin: 0;
 }
 
 /* ===================================
@@ -755,7 +1178,6 @@ body {
    =================================== */
 .registration-section {
     padding: 4rem 0;
-    background-color: var(--dark-green);
 }
 
 .registration-boxes-grid {
@@ -769,12 +1191,10 @@ body {
 }
 
 .registration-box {
-    background: linear-gradient(135deg, var(--green) 0%, var(--primary-brown) 100%);
     padding: 3rem 2rem;
     border-radius: 15px;
     text-decoration: none;
     transition: all 0.4s ease;
-    border: 3px solid var(--beige);
     cursor: pointer;
     text-align: center;
     display: flex;
@@ -793,7 +1213,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, var(--primary-brown) 0%, var(--beige) 100%);
     opacity: 0;
     transition: opacity 0.4s ease;
     z-index: 0;
@@ -805,8 +1224,6 @@ body {
 
 .registration-box:hover {
     transform: translateY(-10px) scale(1.02);
-    border-color: var(--primary-brown);
-    box-shadow: 0 20px 40px rgba(66, 70, 16, 0.5);
 }
 
 .registration-box > * {
@@ -815,36 +1232,30 @@ body {
 }
 
 .registration-box h2 {
-    color: var(--white);
     font-size: 2rem;
     margin-bottom: 1rem;
     font-weight: 700;
 }
 
 .registration-box p {
-    color: var(--text-light);
     line-height: 1.6;
     margin-bottom: 1.5rem;
     font-size: 1rem;
 }
 
 .registration-cta {
-    color: var(--white);
     font-weight: 600;
     font-size: 1.1rem;
     letter-spacing: 1px;
 }
 
 .registration-info {
-    background-color: var(--green);
     padding: 2rem;
     border-radius: 10px;
     margin-bottom: 2rem;
-    border-left: 5px solid var(--primary-brown);
 }
 
 .registration-info h3 {
-    color: var(--white);
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
@@ -855,9 +1266,7 @@ body {
 }
 
 .registration-info li {
-    color: var(--text-light);
     padding: 0.75rem 0;
-    border-bottom: 1px solid var(--beige);
     font-size: 1.05rem;
 }
 
@@ -866,69 +1275,25 @@ body {
 }
 
 /* ===================================
-   QUICK INFO SECTION
-   =================================== */
-.quick-info {
-    padding: 4rem 0;
-    background-color: var(--green);
-}
-
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-}
-
-.info-card {
-    background-color: var(--dark-green);
-    padding: 2rem;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid var(--beige);
-}
-
-.info-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(66, 70, 16, 0.3);
-    border-color: var(--primary-brown);
-}
-
-.info-card h3 {
-    color: var(--white);
-    margin-bottom: 0.5rem;
-    font-size: 1.5rem;
-}
-
-.info-card p {
-    color: var(--text-light);
-}
-
-/* ===================================
    ABOUT PAGE
    =================================== */
 .about-content {
     padding: 4rem 0;
-    background-color: var(--dark-green);
 }
 
 .content-section {
     margin-bottom: 3rem;
     padding: 2rem;
-    background-color: var(--green);
     border-radius: 10px;
 }
 
 .content-section h2 {
-    color: var(--white);
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    border-bottom: 3px solid var(--primary-brown);
     padding-bottom: 0.5rem;
 }
 
 .content-section p {
-    color: var(--text-light);
     margin-bottom: 1rem;
     line-height: 1.8;
 }
@@ -941,20 +1306,16 @@ body {
 }
 
 .feature-item {
-    background-color: var(--dark-green);
     padding: 1.5rem;
     border-radius: 8px;
-    border: 2px solid var(--beige);
 }
 
 .feature-item h3 {
-    color: var(--white);
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
 }
 
 .feature-item p {
-    color: var(--text-light);
     font-size: 0.95rem;
 }
 
@@ -963,7 +1324,6 @@ body {
    =================================== */
 .contact-content {
     padding: 4rem 0;
-    background-color: var(--dark-green);
 }
 
 .contact-centered {
@@ -972,20 +1332,17 @@ body {
 }
 
 .contact-info-main {
-    background-color: var(--green);
     padding: 3rem;
     border-radius: 10px;
 }
 
 .contact-info-main h2 {
-    color: var(--white);
     margin-bottom: 1rem;
     font-size: 2.5rem;
     text-align: center;
 }
 
 .contact-intro {
-    color: var(--text-light);
     text-align: center;
     font-size: 1.2rem;
     margin-bottom: 3rem;
@@ -999,32 +1356,26 @@ body {
 }
 
 .info-box {
-    background-color: var(--dark-green);
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
     transition: transform 0.3s ease;
-    border: 2px solid var(--beige);
 }
 
 .info-box:hover {
     transform: translateY(-5px);
-    border-color: var(--primary-brown);
 }
 
 .info-box h3 {
-    color: var(--white);
     margin-bottom: 0.75rem;
     font-size: 1.5rem;
 }
 
 .info-box p {
-    color: var(--text-light);
     font-size: 1.1rem;
 }
 
 .info-box a {
-    color: var(--primary-brown);
     text-decoration: none;
     font-weight: 600;
 }
@@ -1034,7 +1385,6 @@ body {
 }
 
 .contact-cta-box {
-    background: linear-gradient(135deg, var(--primary-brown) 0%, var(--green) 100%);
     padding: 2.5rem;
     border-radius: 10px;
     text-align: center;
@@ -1042,13 +1392,11 @@ body {
 }
 
 .contact-cta-box h3 {
-    color: var(--white);
     font-size: 2rem;
     margin-bottom: 0.75rem;
 }
 
 .contact-cta-box p {
-    color: var(--text-light);
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
 }
@@ -1058,34 +1406,28 @@ body {
 }
 
 .contact-faq h3 {
-    color: var(--white);
     font-size: 2rem;
     margin-bottom: 2rem;
     text-align: center;
 }
 
 .faq-item {
-    background-color: var(--dark-green);
     padding: 1.5rem;
     border-radius: 8px;
     margin-bottom: 1rem;
-    border: 2px solid var(--beige);
 }
 
 .faq-item h4 {
-    color: var(--white);
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
 }
 
 .faq-item p {
-    color: var(--text-light);
     line-height: 1.6;
     margin: 0;
 }
 
 .faq-item a {
-    color: var(--primary-brown);
     text-decoration: none;
     font-weight: 600;
 }
@@ -1098,19 +1440,16 @@ body {
    CALL TO ACTION
    =================================== */
 .cta {
-    background: linear-gradient(135deg, var(--green) 0%, var(--primary-brown) 100%);
     padding: 4rem 0;
     text-align: center;
 }
 
 .cta h2 {
-    color: var(--white);
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 .cta p {
-    color: var(--text-light);
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
@@ -1119,10 +1458,8 @@ body {
    FOOTER
    =================================== */
 .footer {
-    background-color: var(--green);
     padding: 2rem 0;
     text-align: center;
-    border-top: 3px solid var(--primary-brown);
 }
 
 .footer .container {
@@ -1133,7 +1470,6 @@ body {
 }
 
 .footer p {
-    color: var(--text-light);
     margin: 0;
 }
 
@@ -1143,13 +1479,8 @@ body {
 }
 
 .footer-links a {
-    color: var(--text-light);
     text-decoration: none;
     transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: var(--white);
 }
 
 /* ===================================
@@ -1180,6 +1511,10 @@ body {
     .info-boxes-grid {
         grid-template-columns: 1fr;
     }
+    
+    .team-row {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1192,7 +1527,6 @@ body {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: var(--green);
         width: 100%;
         text-align: center;
         transition: 0.3s;
@@ -1212,7 +1546,6 @@ body {
     .dropdown-content {
         position: static;
         box-shadow: none;
-        background-color: var(--dark-green);
         margin-top: 0.5rem;
     }
     
@@ -1247,105 +1580,53 @@ body {
         flex-direction: column;
         gap: 0.5rem;
     }
-}
-
-/* ===================================
-   TEAM PAGE STYLES
-   =================================== */
-.team-content {
-    padding: 4rem 0;
-    background-color: var(--dark-green);
-}
-
-.team-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    margin-bottom: 3rem;
-}
-
-.team-row.single {
-    grid-template-columns: 1fr;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.team-member {
-    background-color: var(--green);
-    padding: 2.5rem;
-    border-radius: 10px;
-    border: 3px solid var(--beige);
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.team-member:hover {
-    transform: translateY(-5px);
-    border-color: var(--primary-brown);
-    box-shadow: 0 10px 30px rgba(72, 51, 34, 0.4);
-}
-
-.team-photo {
-    width: 200px;
-    height: 200px;
-    background-color: var(--dark-green);
-    border-radius: 50%;
-    margin: 0 auto 1.5rem;
-    border: 4px solid var(--primary-brown);
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.team-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.team-role {
-    color: var(--primary-brown);
-    font-size: 0.95rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 0.75rem;
-}
-
-.team-name {
-    color: var(--white);
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-
-.team-description {
-    color: var(--text-light);
-    line-height: 1.7;
-    font-size: 1rem;
-}
-
-.team-description p {
-    margin: 0;
-}
-
-@media (max-width: 968px) {
-    .team-row {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
     
     .team-photo {
         width: 180px;
         height: 180px;
     }
-}
-
-@media (max-width: 768px) {
+    
     .team-member {
         padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .logo-image {
+        height: 35px;
+    }
+    
+    .logo span {
+        font-size: 1rem;
+    }
+    
+    .registration-box {
+        padding: 2rem 1rem;
+        min-height: 220px;
+    }
+    
+    .registration-box h2 {
+        font-size: 1.5rem;
+    }
+    
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .content-section {
+        padding: 1.5rem;
+    }
+    
+    .contact-info-main {
+        padding: 1.5rem;
+    }
+    
+    .cta h2 {
+        font-size: 1.8rem;
     }
     
     .team-photo {
