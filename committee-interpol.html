@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTERPOL - BELMUN 2026</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.png" alt="BELMUN Logo" class="logo-image" id="logoImage">
+                <span>BELMUN 2026</span>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="committees.html" class="active">Committees</a>
+                    <div class="dropdown-content">
+                        <a href="committee-who.html">WHO</a>
+                        <a href="committee-unodc.html">UNODC</a>
+                        <a href="committee-unicef.html">UNICEF</a>
+                        <a href="committee-fifa.html">FIFA</a>
+                        <a href="committee-ipc.html">IPC</a>
+                        <a href="committee-icj.html">ICJ</a>
+                        <a href="committee-uss.html">USS</a>
+                        <a href="committee-interpol.html">INTERPOL</a>
+                        <a href="committee-fia.html">FIA</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="delegate-resources.html">Delegate Resources</a>
+                    <div class="dropdown-content">
+                        <a href="delegate-resources.html#handbook">Delegate Handbook</a>
+                        <a href="delegate-resources.html#position-paper">Position Paper Guide</a>
+                        <a href="delegate-resources.html#resolution">Resolution Paper Guide</a>
+                        <a href="delegate-resources.html#schedule">Conference Schedule</a>
+                    </div>
+                </li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <img src="un-header.jpg" alt="UN Assembly" class="un-header-image" style="display: none;" onerror="this.style.display='none'">
+        <div class="container">
+            <h1>International Criminal Police Organization</h1>
+            <p>Advanced Level Committee</p>
+        </div>
+    </section>
+
+    <section class="committee-detail">
+        <div class="container">
+            <div class="committee-layout">
+                <div class="committee-left">
+                    <div class="committee-image-container">
+                        <img src="committee-images/interpol.jpg" alt="INTERPOL Committee" class="committee-image" style="display: none;" onerror="this.style.display='none'; this.parentElement.querySelector('.committee-image-placeholder').style.display='block';">
+                        <div class="committee-image-placeholder" style="display: block;">
+                            <p><strong>Add INTERPOL Committee Image Here</strong></p>
+                            <p style="font-size: 0.9rem; margin-top: 1rem;">Upload your image as:<br>committee-images/interpol.jpg</p>
+                        </div>
+                    </div>
+
+                    <div class="background-guide-box">
+                        <h3>Background Guide</h3>
+                        <div class="file-upload-placeholder" onclick="alert('Background guide will be uploaded here soon! Stay tuned.')">
+                            <p><strong>📄 Click to view guide</strong></p>
+                            <p style="font-size: 0.9rem;">Upload as: guides/interpol-background-guide.pdf</p>
+                            <span class="coming-soon-badge">Coming Soon</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="committee-right">
+                    <div class="committee-title">
+                        <h1>interpol <span class="full-name">(International Criminal Police Organization)</span></h1>
+                    </div>
+
+                    <div class="committee-description">
+                        <p>Combat transnational crime, terrorism, and cybersecurity threats through international police cooperation and intelligence sharing.</p>
+                        <p>Delegates will engage in substantive debate on critical issues facing this committee, developing comprehensive solutions through diplomatic negotiation and collaborative problem-solving. This committee provides an excellent opportunity to develop leadership skills, enhance public speaking abilities, and gain deeper understanding of international relations.</p>
+                    </div>
+
+                    <div class="committee-staff">
+                        <h2 style="color: var(--white); margin-bottom: 2rem; text-align: center; font-size: 2rem;">Committee Staff</h2>
+                        
+                        <div class="staff-row">
+                            <div class="staff-member">
+                                <div class="staff-role">Head Chair</div>
+                                <div class="staff-photo-placeholder">
+                                    <p>Photo</p>
+                                </div>
+                                <div class="staff-name staff-placeholder">[Name to be added]</div>
+                                <div class="staff-description staff-placeholder">
+                                    <p>Add head chair name, photo, and description here</p>
+                                </div>
+                            </div>
+
+                            <div class="staff-member">
+                                <div class="staff-role">Co-Chair</div>
+                                <div class="staff-photo-placeholder">
+                                    <p>Photo</p>
+                                </div>
+                                <div class="staff-name staff-placeholder">[Name to be added]</div>
+                                <div class="staff-description staff-placeholder">
+                                    <p>Add co-chair name, photo, and description here</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="staff-row">
+                            <div class="staff-member pager">
+                                <div class="staff-role">Pager</div>
+                                <div class="staff-photo-placeholder">
+                                    <p>Photo</p>
+                                </div>
+                                <div class="staff-name staff-placeholder">[Name to be added]</div>
+                                <div class="staff-description staff-placeholder">
+                                    <p>Add pager name, photo, and description here</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Interested in INTERPOL?</h2>
+            <p>Register as a delegate to participate in this committee</p>
+            <a href="register.html" class="btn btn-primary">Register Now</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 BELMUN. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="committees.html">Committees</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
